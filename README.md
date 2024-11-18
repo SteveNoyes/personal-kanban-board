@@ -130,6 +130,10 @@ To see how you can add code snippets, see below:
 
 ### Useful resources
 
+- [Color Palette Generator](https://coolors.co/) - Color palette generator.
+- [Free Logo Design](https://www.freelogodesign.org/) - Free logo design.
+- [Favicon Generator](https://favicon.io/) - Favicon generator.
+- [Transfonter](https://transfonter.org/) - This tool converts any TTF, OTF, WOFF, WOFF2 or SVG fonts to css @font-face formats with CSS and HTML sample files.
 - [Placeholder Image](https://placehold.co/600x400) - Placeholder image. 
 - [The Markdown Guide](https://www.markdownguide.org/) - If you want more help with writing markdown, we'd recommend checking out this site.
 
