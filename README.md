@@ -3,10 +3,6 @@
 ## Table of contents
 
 - [Overview](#overview)
-  - [Usage](#usage)
-    - [Scheduling a Post](#scheduling-a-post)
-    - [Viewing Scheduled Posts](#viewing-scheduled-posts)
-    - [Auto Publish](#auto-publish)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -22,37 +18,10 @@
 
 Users should be able to:
 
-- **PERSONAL KANBAN with a Pomodoro Timer**: PERSONAL KANBAN with a Pomodoro Timer.
-- View the optimal layout for the interface depending on their device's screen size
-- SINGLE PAGE APP
+- **PERSONAL KANBAN with a Pomodoro Timer**: Use Kanban board and set a timer
+- A local storage natepad
+- A 30 minute reminder to stand and drink water
 
-
-### Usage
-
-- Schedule Posts: Write content, choose a platform (Twitter/Facebook), and set a time for posting.
-- View Scheduled Posts: See upcoming scheduled posts with the ability to publish or delete them.
-- Auto Publish: Posts are automatically published when their scheduled time arrives.
-- Mock Social Media Post: Publish posts to Twitter or Facebook (mocked for this example).
-
-#### Scheduling a Post
-
-- To schedule a post:
-- Enter the content you want to post in the textarea.
-- Choose the platform (Twitter or Facebook).
-- Select the time you want the post to be published.
-- Click the Schedule Post button.
-
-#### Viewing Scheduled Posts
-- All scheduled posts will appear below the form. Each post will show:
-- The platform (Twitter or Facebook)
-- The scheduled time
-- The content of the post
-- You can:
-- Publish Now: Publish the post immediately.
-- Delete: Remove the post from the schedule.
-
-#### Auto Publish
-- Scheduled posts will automatically be published once their time arrives. A background process checks the scheduled times every second and triggers the publish action when necessary.
 
 ### Screenshot
 
@@ -81,14 +50,79 @@ Users should be able to:
 To see how you can add code snippets, see below:
 
 ```html
-
+<div class="kanban-container">
+  <header>
+      <h1>Daily Kanban Board</h1>
+      <button id="add-task-btn">Add Task</button>
+  </header>
+  <div class="kanban-board">
+      <div class="kanban-column" id="todo" data-status="To Do">
+          <h2>To Do</h2>
+          <div class="kanban-tasks"></div>
+      </div>
+      <div class="kanban-column" id="in-progress" data-status="In Progress">
+          <h2>In Progress</h2>
+          <div class="kanban-tasks"></div>
+      </div>
+      <div class="kanban-column" id="done" data-status="Done">
+          <h2>Done</h2>
+          <div class="kanban-tasks"></div>
+      </div>
+  </div>
 ```
 
 ```css
+  @media only screen and (max-width: 1443px) {
+    .pomodoro-container {
+      height: 250px !important;
+    }
+    #reset-timer {
+      margin-top: 20px;
+    }
+  }
 
+  @media only screen and (max-width: 958px) {
+    .pomodoro-container {
+      height: 310px !important;
+    }
+    #start-timer {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 846px) {
+    .pomo-and-note-wrapper {
+      display:block !important;
+      flex-direction: row-reverse !important;
+    }
+    .pomodoro-container {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .notepad-container {
+      max-width: 90% !important;
+      margin-left: 3% !important;
+    }
+    .desktop-wrapper {
+      display: none !important;
+    }
+    .tablet-wrapper {
+      display: inline !important;
+    }
+  }
 ```
 
 ```js
+
+  // Reminder message
+  function showReminder() {
+    alert("Stand Up and Drink Water");
+  }
+
+  // Fimer to alert user every 30 minutes (30 minutes = 1800000 milliseconds)
+  window.onload = function() {
+    setInterval(showReminder, 1800000);
+  };
 
 ```
 
@@ -122,5 +156,4 @@ To see how you can add code snippets, see below:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Steven Noyes](https://www.stevenmnoyes.com)
