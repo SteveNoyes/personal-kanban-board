@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Kanban Board</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kanban-container">
+        <header>
+            <h1>Daily Kanban Board</h1>
+            <button id="add-task-btn">Add Task</button>
+        </header>
+        <div class="kanban-board">
+            <div class="kanban-column" id="todo" data-status="To Do">
+                <h2>To Do</h2>
+                <div class="kanban-tasks"></div>
+            </div>
+            <div class="kanban-column" id="in-progress" data-status="In Progress">
+                <h2>In Progress</h2>
+                <div class="kanban-tasks"></div>
+            </div>
+            <div class="kanban-column" id="done" data-status="Done">
+                <h2>Done</h2>
+                <div class="kanban-tasks"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Adding a Task -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Task Title" required>
+                <textarea id="task-details" placeholder="Task Details"></textarea>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+    <!-- Timer and Notepad Wrapper -->
+     <div class="pomo-and-note-wrapper desktop-wrapper">
+        <!-- Pomodoro Timer -->
+        <div class="pomodoro-container">
+            <h2>Pomodoro Timer</h2>
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="start-timer">&nbsp;Start&nbsp;</button>
+                <button id="pause-timer">Pause</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+        </div>
+        <!-- Local Notepad -->
+        <div class="notepad-container">
+            <textarea id="notepad" placeholder="notes..." autofocus></textarea>
+        </div>
+     </div>
+    <!-- Tablet Timer and Notepad Wrapper -->
+     <div class="pomo-and-note-wrapper tablet-wrapper">
+        <!-- Local Notepad -->
+        <div class="notepad-container">
+            <textarea id="notepad" placeholder="notes..." autofocus></textarea>
+        </div>
+        <!-- Pomodoro Timer -->
+        <div class="pomodoro-container">
+            <h2>Pomodoro Timer</h2>
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="start-timer">&nbsp;Start&nbsp;</button>
+                <button id="pause-timer">Pause</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+        </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>

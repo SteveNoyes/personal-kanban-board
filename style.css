@@ -1,0 +1,269 @@
+body {
+  font-family: monospace, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  overflow-x: hidden;
+}
+
+:root {
+  --Dark-olive-green: #606c38;
+  --pine-tree: #283618;
+  --cornsilk: #fefae0;
+  --earth-yellow: #dda15e;
+  --ruddy-brown: #bc6c25;
+  --timberwolf: #dad7cd;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--pine-tree);
+  color: var(--white);
+  border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header button {
+  background-color: var(--white);
+  color: var(--Dark-olive-green);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header button:hover {
+  background-color: var(--ruddy-brown);
+  color: var(--white);
+}
+
+.kanban-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+}
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+}
+
+.kanban-column {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h2 {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.kanban-tasks {
+  min-height: 100px;
+  padding: 10px;
+  border: 2px dashed #dee2e6;
+  border-radius: 5px;
+}
+
+.task {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close-btn {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Notepad and Timer Wrapper */
+
+.pomo-and-note-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* TIMER */
+
+/* Pomodoro Timer Styling */
+.pomodoro-container {
+  width: 20%;
+  max-width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pomodoro-container h2 {
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timer-controls button {
+  background-color: var(--ruddy-brown);
+  color: var(--timberwolf);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timer-controls button:hover {
+  background-color: #bc6c25CC;
+}
+
+.notepad-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 80%;
+  height: 300px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: monospace, sans-serif;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--earth-yellow);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--Dark-olive-green);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--pine-tree);
+}
+
+.desktop-wrapper {
+  display: flex;
+}
+.tablet-wrapper {
+  display: none;
+}
+
+@media only screen and (max-width: 1443px) {
+  .pomodoro-container {
+    height: 250px !important;
+  }
+  #reset-timer {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 958px) {
+  .pomodoro-container {
+    height: 310px !important;
+  }
+  #start-timer {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 846px) {
+  .pomo-and-note-wrapper {
+    display:block !important;
+    flex-direction: row-reverse !important;
+  }
+  .pomodoro-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .notepad-container {
+    max-width: 90% !important;
+    margin-left: 3% !important;
+  }
+  .desktop-wrapper {
+    display: none !important;
+  }
+  .tablet-wrapper {
+    display: inline !important;
+  }
+}
