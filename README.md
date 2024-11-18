@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Repo URL: [github.com/SteveNoyes/personal-kanban-board](https://github.com/SteveNoyes/personal-kanban-board)
-- Live Site URL: []()
+- Live Site URL: [https://stevenoyes.github.io/personal-kanban-board/](https://stevenoyes.github.io/personal-kanban-board/)
 
 ## My process
 
