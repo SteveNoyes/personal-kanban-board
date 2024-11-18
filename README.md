@@ -1,4 +1,4 @@
-# Personal Kanban Board with Pomodoro Timer
+# Personal Kanban Board with Pomodoro Timer and Notepad
 
 ## Table of contents
 
