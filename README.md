@@ -1,4 +1,4 @@
-# Frontend Mentor - Personal Kanban Board with Pomodoro Timer
+# Personal Kanban Board with Pomodoro Timer
 
 ## Table of contents
 
